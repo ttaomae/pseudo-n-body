@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
     size_t pParticles_size = numPParticles*sizeof(cl_float4);
     cl_float4* h_pParticles = (cl_float4*)malloc(pParticles_size);
     for (int i = 0; i < numPParticles; i++) {
-        cl_float4 temp = {{rand(), rand(), rand(), 10000*rand()}};
+        cl_float4 temp = {{rand(), rand(), rand(), rand()}};
         h_pParticles[i] = temp;
     }
 
@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
     size_t tParticles_size = numTParticles*sizeof(cl_float8);
     cl_float8* h_tParticles = (cl_float8*)malloc(tParticles_size);
     for (int i = 0; i < numTParticles; i++) {
-        cl_float8 temp = {{rand(),   rand(),   rand(),   10000*(rand()%500),
+        cl_float8 temp = {{rand(),   rand(),   rand(),   rand() % 500,
                            rand()%5, rand()%5, rand()%5, 0.0f       }};
         h_tParticles[i] = temp;
     }

@@ -37,7 +37,7 @@ int main(int argc, char** argv)
         x[i] = rand();
         y[i] = rand();
         z[i] = rand();
-        m[i] = 10000*rand();
+        m[i] = rand();
     }
     // initialize test particles
     for (int i = 0; i < numTParticles; i++) {
@@ -45,7 +45,7 @@ int main(int argc, char** argv)
         tParticles[i]->x = rand();
         tParticles[i]->y = rand();
         tParticles[i]->z = rand();
-        tParticles[i]->m =  10000*(rand()%500);
+        tParticles[i]->m =  rand() % 500;
         tParticles[i]->vx = rand() % 5;
         tParticles[i]->vy = rand() % 5;
         tParticles[i]->vz = rand() % 5;
