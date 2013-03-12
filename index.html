@@ -37,6 +37,8 @@
 
 <p>The pseudo-n-body problem is a variation of the classic <a href="http://en.wikipedia.org/wiki/N-body_problem" title="n-body problem">n-body problem</a>. In the classic n-body problem, there are a number of point masses which interact with each other gravitationally. In this variation, there are a number of <em>pseudo-particles</em> which do not move and one or more <em>test particles</em> which move based on their interactions with pseudo-particles, but not other test particles.</p>
 
+<p>The above image shows a visualization of what this program tries to compute. Each red 'x' represents a pseudo-particle and the blue line shows a trace of the path of a single test particle as it interacts with all pseudo-particles.</p>
+
 <h2>Implementation</h2>
 
 <p>There is a (single-threaded) CPU version and a GPU (OpenCL) version for either a single or multiple test particles. Each version allows you to specify amount of pseudo-particles, iterations, and the duration of the time steps used to calculate the movement. The version which allows multiple test particles, allows you to specify the number of test particles. The GPU versions allows you to specify the local work group size(s).</p>
